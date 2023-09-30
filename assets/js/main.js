@@ -10,15 +10,19 @@ function convertPokemonToLi(pokemon) {
         <li class="pokemon ${pokemon.type}">
             <span class="number">#${pokemon.number}</span>
             <span class="name">${pokemon.name}</span>
-
             <div class="detail">
                 <ol class="types">
-                    ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
+                    ${pokemon.types.map((type) => `<li class="type">${type}</li>`).join('')}
                 </ol>
-
                 <img src="${pokemon.photo}"
-                     alt="${pokemon.name}">
+                alt="${pokemon.name}">
             </div>
+            <ol class="poder">
+                <li>base Exp: ${pokemon.base_experience}</li>
+                <li>Altura: ${pokemon.height}</li>
+                <li>Ordem: ${pokemon.order }</li>
+                <li>Peso: ${pokemon.weight}</li>
+            </ol>
         </li>
     `
 }
@@ -31,7 +35,7 @@ function loadPokemonItens(offset, limit) {
 }
 
 loadPokemonItens(offset, limit)
-
+// BOTAO PAGINAÇAO
 loadMoreButton.addEventListener('click', () => {
     offset += limit
     const qtdRecordsWithNexPage = offset + limit
