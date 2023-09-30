@@ -146,23 +146,6 @@
     border: none;
     border-radius: 1rem;
 }
-.botaoImg {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-.botaoImg button {
-    padding: .25rem .5rem;
-    margin: .25rem 0;
-    font-size: 1 rem;
-    color: #fff;
-    background-color: gray;
-    border: none;
-    border-radius: 1rem;
-    filter: brightness(1.1);
-}
 .poder {
     list-style: none;
     padding: 0rem;
